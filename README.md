@@ -70,22 +70,6 @@ cd Analog-Clock-Reader
 For more detailed information, refer to the [Report.pdf](./Report.pdf).
 
 
-## How it Works
-1. **Preprocessing**:
-    - The input image is first converted to grayscale and enhanced using gamma correction.
-    - Noise is reduced using median and bilateral filtering.
-    - Adaptive thresholding is applied to convert the image to binary for easier feature detection.
-  
-2. **Clock Face Detection**:
-    - The largest contour in the binary image is detected and assumed to be the clock face.
-  
-3. **Hand Detection**:
-    - The Hough Line Transform is used to detect lines representing the clock hands.
-    - Detected lines are classified as either hour or minute hands based on their lengths and angles.
-  
-4. **Time Calculation**:
-    - The angles of the hour and minute hands are calculated relative to the 12 o'clock position, and the corresponding time is determined.
-(For more information see the Report.pdf file)
 
 ## Limitations
 - Accuracy may be reduced if the clock image contains a second hand, has low contrast, or if the hands overlap.
