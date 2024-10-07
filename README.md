@@ -46,7 +46,16 @@ cd Analog-Clock-Reader
 
 ## Demo Images
 
+Here are the demo images provided:
 
+- **Image 1**:  
+  ![Output Image](Output%20Image/Image1.png)
+
+- **Image 2**:  
+  ![Output Image](Output%20Image/Image2.png)
+
+- **Image 3**:  
+  ![Output Image](Output%20Image/Image3.png)
 
 
 ## How it Works
