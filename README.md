@@ -1,12 +1,8 @@
 # Analog-Clock-Reader
 
 ## Project Overview
-**Analog-Clock-Reader** is a computer vision project aimed at reading the time from an analog clock image using image processing techniques. This project leverages various image enhancement, edge detection, and feature extraction methods to detect the clock face, identify the clock hands, and accurately calculate the time.
+**Analog-Clock-Reader** is an image processing project aimed at reading the time from an analog clock image. This project leverages various image enhancement, edge detection, and feature extraction methods to detect the clock face, identify the clock hands, and accurately calculate the time.
 
-## Objectives
-- Enhance the quality of input images for better analysis.
-- Detect the clock face and identify the clock hands.
-- Calculate and display the time based on the positions of the detected hands.
 
 ## Features
 - **Preprocessing**: Applies gamma correction, noise removal, and thresholding to improve image clarity.
@@ -26,10 +22,13 @@ Ensure that you have the following libraries installed:
 - [Tkinter](https://wiki.python.org/moin/TkInter)
 - [PIL](https://pillow.readthedocs.io/)
 
-You can install them using pip:
+
+You can install the required libraries using the provided `requirements.txt` file. Run the following command:
+
 ```bash
-pip install opencv-python numpy matplotlib scikit-image pillow
+pip install -r requirements.txt
 ```
+
 
 ### Clone the Repository
 ```bash
@@ -38,12 +37,15 @@ cd Analog-Clock-Reader
 ```
 
 ## Usage
-1. Place the image of an analog clock in the `input_images` folder.
-2. Run the Python script to process the image:
+1. Run the Python script to star the application
     ```bash
-    python clock_reader.py --image input_images/your_clock_image.jpg
+    python main.py
     ```
-3. The processed image, along with the detected clock face, hands, and calculated time, will be displayed.
+2. Select an image of an analog clock in the `input_images` folder.
+3. Maximize the window to see the output results with the intermediary steps
+
+## Demo Images
+
 
 ## How it Works
 1. **Preprocessing**:
@@ -60,11 +62,15 @@ cd Analog-Clock-Reader
   
 4. **Time Calculation**:
     - The angles of the hour and minute hands are calculated relative to the 12 o'clock position, and the corresponding time is determined.
+(For more information see the Report.pdf file)
 
 ## Limitations
 - Accuracy may be reduced if the clock image contains a second hand, has low contrast, or if the hands overlap.
 - Complex backgrounds or distorted images may interfere with detection.
-  
+
+## Known Bugs
+- Only 6 and 12 o clock is considered for the scenario where the hour hand and minute hand form a single line.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
